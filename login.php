@@ -1,6 +1,6 @@
 <?php
 include 'koneksi.php';
-$result = pg_query($conn, "SELECT * FROM siswa where nisn = '$_GET[nisn]'");
+$result = pg_query($conn, "SELECT * FROM siswa where nisn = $_GET[nisn]");
 
 $arr = pg_fetch_all($result);
 //print_r($arr[0])
