@@ -17,7 +17,12 @@ $max = count($arr);
 for($i=0;$i<$max;$i++){
     $json[$i] = [
         'id_siswa' => $arr[$i]["id"],
-        'nama_siswa' => $arr[$i]["nama"]
+        'nama_siswa' => $arr[$i]["nama"],
+        'alamat_siswa' => $arr[$i]["alamat"],
+        'no_telp' => $arr[$i]["notelp"],
+        'sekolah_asal' => $arr[$i]["sekolah_asal"],
+        'nama_ortu' => $arr[$i]["nama_ortu"],
+        'nisn' => $arr[$i]["nisn"],
         ];
 }
 $data = ['data' => $json];
