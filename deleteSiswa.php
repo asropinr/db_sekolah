@@ -17,9 +17,9 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 $msg['message'] = '';
 
 // CHECK IF RECEIVED DATA FROM THE REQUEST
-if($_GET['nama']){
+if($_GET['id']){
     // CHECK DATA VALUE IS EMPTY OR NOT
-      $query = "insert into siswa(nama, image,alamat,notelp,sekolah_asal,nama_ortu,NISN) values('$_GET[nama]', '$_GET[image]','$_GET[alamat]','$_GET[notelp]','$_GET[sekolah_asal]','$_GET[nama_ortu]','$_GET[nisn]')";
+      $query = "delete from siswa where id = '$_GET[id]'";
       $result = pg_query($query); 
       if($result){
         $msg['message'] = "SUKSES";

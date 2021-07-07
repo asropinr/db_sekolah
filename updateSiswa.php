@@ -19,7 +19,7 @@ $msg['message'] = '';
 // CHECK IF RECEIVED DATA FROM THE REQUEST
 if($_GET['nama']){
     // CHECK DATA VALUE IS EMPTY OR NOT
-      $query = "insert into siswa(nama, image,alamat,notelp,sekolah_asal,nama_ortu,NISN) values('$_GET[nama]', '$_GET[image]','$_GET[alamat]','$_GET[notelp]','$_GET[sekolah_asal]','$_GET[nama_ortu]','$_GET[nisn]')";
+      $query = "update siswa set nama = '$_GET[nama]',image = '$_GET[image]',alamat = '$_GET[alamat]',notelp = 1234,sekolah_asal = '$_GET[sekolah_asal]',nama_ortu = '$_GET[nama_ortu]',nisn = '$_GET[NISN]' where id = '$_GET[id]'";
       $result = pg_query($query); 
       if($result){
         $msg['message'] = "SUKSES";
